@@ -5,6 +5,14 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    {
+      name: "@storybook/addon-coverage",
+      options: {
+        istanbul: {
+          exclude: ["**/Button*"]
+        }
+      }
+    },
   ],
   framework: {
     name: "@storybook/react-vite",
